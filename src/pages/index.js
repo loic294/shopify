@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout/'
 import Split from '../components/Split'
 import Repositories from '../components/repositories'
-import Starred from '../components/Starred'
+import Starred from '../components/starred'
 import Search from '../components/Search'
 
 class IndexPage extends Component {
