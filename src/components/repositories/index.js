@@ -1,5 +1,5 @@
 import React from 'react'
-import { Query } from 'react-apollo'
+import { Query } from 'react-apollo/lib/react-apollo.umd'
 import client from '../../queries/index'
 import s from './styles.module.scss'
 
