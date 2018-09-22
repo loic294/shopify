@@ -22,7 +22,7 @@ const Repositories = ({ search }) => {
                     {({ loading, error, data }) => {
                         if (error) return <p>{error.message}</p>;
             
-                        if (!data || !data.search || !data.search.nodes || loading) {
+                        if (!data || !data.search || !data.search.nodes) {
                             return null
                         }
             
@@ -45,7 +45,7 @@ const Repositories = ({ search }) => {
                                             <a href="#" onClick={() => {
                                                 console.log('ID', id)
                                                 addStar({ variables: { input: { starrableId: id }}})
-                                            }}>{viewerHasStarred ? 'Add 2' : 'Add'}</a>
+                                            }}>{viewerHasStarred ? null : 'Add'}</a>
                                         </td>
                                     </tr>
                                 ))}

@@ -11,7 +11,8 @@ class Search extends Component {
     this.setState({ search: e.target.value })
   }
 
-  update = _ => {
+  update = e => {
+    e.preventDefault()
     const { search } = this.state
     const { update } = this.props
     console.log('UPDATE', search)
@@ -24,9 +25,10 @@ class Search extends Component {
     const { update } = this.props
 
     return <div className={s.search}>
-      <input type="rext" className={s.input} value={search} onChange={this.change} />
-
-      <button onClick={this.update}>Search</button>
+      <form onSubmit={this.update}>
+        <input type="rext" placeholder="Search Github" className={s.input} value={search} onChange={this.change} />
+        <button type="submit">Search</button>
+      </form>
     </div>
   }
 }

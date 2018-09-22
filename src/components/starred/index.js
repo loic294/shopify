@@ -27,7 +27,7 @@ const Repositories = ({ search }) => {
 
                     console.log('DATA', data)
         
-                    if (!data || !data.user || !data.user.starredRepositories || !data.user.starredRepositories.nodes || loading) {
+                    if (!data || !data.user || !data.user.starredRepositories || !data.user.starredRepositories.nodes) {
                         return null
                     }
         

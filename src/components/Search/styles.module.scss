@@ -2,8 +2,10 @@
 
 .search {
 
-    display: flex;
-    margin-bottom: 40px;
+    form {
+        display: flex;
+        margin-bottom: 40px;
+    }
 
     .input {
         border: 1px solid #999;
@@ -19,6 +21,7 @@
     }
 
     button {
+        display: inline-block;
         background-color: $purple;
         padding: 10px 48px;
         border-radius: 4px;
