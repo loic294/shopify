@@ -1,0 +1,15 @@
+@import "../../styles/base.scss";
+
+.split {
+    display: flex;
+    align-items: stretch;
+
+    & > * {
+        padding: 60px 50px;
+        width: 50%;
+
+        &:nth-child(2) {
+            background-color: $purple-light;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../styles/base.scss";
+
+.header {
+    background-color: $purple;
+    padding: 2.5em 3em;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    
+    a {
+        color: white;
+        text-transform: none;
+        text-decoration: none;
+    }
+}

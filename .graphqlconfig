@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "Github": {
+      "extensions": {
+        "endpoints": {
+          "dev": "https://api.github.com/graphql"
+        }
+      }
+    }
+  }
+}
