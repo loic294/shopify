@@ -1,12 +1,13 @@
 import React from 'react'
 import { Query } from 'react-apollo'
 import client from '../../queries/index'
+import s from './styles.module.scss'
 
 import { GET_DIRECTORIES } from '../../queries/search'
 
 const Repositories = () => {
     return (
-        <div>
+        <div className={s.tab}>
             <Query client={client} query={GET_DIRECTORIES}>
                 {({ loading, error, data }) => {
                     if (error) return <p>{error.message}</p>;
