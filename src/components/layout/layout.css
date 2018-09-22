@@ -185,7 +185,7 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 * {
   box-sizing: inherit;
@@ -563,6 +563,7 @@ abbr[title] {
 thead {
   text-align: left;
 }
+
 td,
 th {
   text-align: left;
@@ -582,6 +583,9 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0;
+}
+thead th {
+  padding-bottom: 20px;
 }
 tt,
 code {

@@ -3,9 +3,10 @@
 .split {
     display: flex;
     align-items: stretch;
+    height: calc(100vh - 134px);
 
     & > * {
-        padding: 60px 50px;
+        padding: 50px;
         width: 50%;
 
         &:nth-child(2) {

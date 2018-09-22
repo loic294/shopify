@@ -1,10 +1,12 @@
 import gql from 'graphql-tag'
 
 export const GET_DIRECTORIES = gql`
-{
-    search(query: "shopify", type: REPOSITORY, first: 10) {
+query Search($search: String!) {
+    search(query: $search, type: REPOSITORY, first: 10) {
         nodes {
+        __typename
         ... on Repository {
+            id
             nameWithOwner
             primaryLanguage {
                 name
