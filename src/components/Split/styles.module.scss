@@ -5,9 +5,18 @@
     align-items: stretch;
     height: calc(100vh - 134px);
 
+    @media screen and (max-width: 996px) {
+        display: block;
+        height: auto;
+    }
+
     & > * {
         padding: 50px;
         width: 50%;
+
+        @media screen and (max-width: 996px) {
+            width: 100%;
+        }
 
         &:nth-child(2) {
             background-color: $purple-light;
