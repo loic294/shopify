@@ -1,3 +1,4 @@
+/* eslint jsx-a11y/anchor-is-valid: 0 */
 import React from 'react'
 import { Query, Mutation } from 'react-apollo/lib/react-apollo.umd'
 import client from '../../queries/index'

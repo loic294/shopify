@@ -15,14 +15,12 @@ class Search extends Component {
     e.preventDefault()
     const { search } = this.state
     const { update } = this.props
-    console.log('UPDATE', search)
     update(search)
   }
 
   render() {
 
     const { search } = this.state
-    const { update } = this.props
 
     return <div className={s.search}>
       <form onSubmit={this.update}>
