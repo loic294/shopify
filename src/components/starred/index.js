@@ -9,6 +9,7 @@ import { GET_DIRECTORIES } from '../../queries/search'
 import { REMOVE_STAR } from '../../queries/stars'
 
 import Table from '../Table/'
+import { addTaost } from '../Toast/'
 
 const Starred = ({ search }) => {
     return (
@@ -30,7 +31,8 @@ const Starred = ({ search }) => {
 
                             return <Table
                                 nodes={data && data.user && data.user.starredRepositories && data.user.starredRepositories.nodes}
-                                action={id => {
+                                action={(id, name) => {
+                                    addTaost(`${name} removed from favorites`)
                                     removeStar({ variables: { input: { starrableId: id }}})
                                 }}
                                 condition={value => { return value ? 'Remove' : '' }}

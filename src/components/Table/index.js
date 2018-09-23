@@ -34,13 +34,13 @@ const Table = ({ nodes, action, condition, image, emptyTitle, emptySubtitle }) =
         </tr>
     </thead>
     <tbody>
-        {nodes.map(({ id, nameWithOwner, primaryLanguage, releases, viewerHasStarred }, key) => (
+        {nodes.map(({ id, nameWithOwner, url, primaryLanguage, releases, viewerHasStarred }, key) => (
             <tr key={key}>
-                <td>{nameWithOwner}</td>
+                <td><a href={url} target="_blank" rel="noopener noreferrer" className={s.invisibleLink}>{nameWithOwner}</a></td>
                 <td>{primaryLanguage && primaryLanguage.name}</td>
                 <td>{releases.nodes && releases.nodes[0] && releases.nodes[0].tag ? releases.nodes[0].tag.name : '-'}</td>
                 <td>
-                    <a href="#" onClick={() => action(id)}>{condition(viewerHasStarred)}</a>
+                    <a href="#" onClick={() => action(id, nameWithOwner)}>{condition(viewerHasStarred)}</a>
                 </td>
             </tr>
         ))}

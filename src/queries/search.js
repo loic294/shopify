@@ -7,6 +7,7 @@ query Search($search: String!) {
         __typename
         ... on Repository {
             id
+            url
             nameWithOwner
             primaryLanguage {
                 name

@@ -7,6 +7,7 @@ export const GET_STARRED = gql`
       nodes {
         __typename
         id
+        url
         nameWithOwner
         primaryLanguage {
           name

@@ -1,0 +1,19 @@
+@import "../../styles/base.scss";
+
+.toasts {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 280px;
+
+    .toast {
+        background-color: #222;
+        padding: 8px 24px;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-top: 6px;
+        transition: all ease 0.4s;
+    }
+
+}

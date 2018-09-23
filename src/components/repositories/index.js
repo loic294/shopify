@@ -8,6 +8,7 @@ import { GET_STARRED } from '../../queries/starred'
 import { ADD_STAR } from '../../queries/stars'
 
 import Table from '../Table/'
+import { addTaost } from '../Toast/'
 
 const Repositories = ({ search }) => {
     return (
@@ -26,7 +27,8 @@ const Repositories = ({ search }) => {
             
                         return <Table
                             nodes={data && data.search && data.search.nodes}
-                            action={id => {
+                            action={(id, name) => {
+                                addTaost(`${name} added to favorites!`)
                                 addStar({ variables: { input: { starrableId: id }}})
                             }}
                             condition={value => value ? null : 'Add'}

@@ -22,8 +22,6 @@ class IndexPage extends Component {
 
     const { search } = this.state
 
-    console.log('SEARCH', search)
-
     return (
       <Layout>
         <Split>
