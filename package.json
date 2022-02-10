@@ -14,7 +14,7 @@
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.1",
     "node-fetch": "^2.2.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "react": "^16.5.1",
     "react-apollo": "git+https://3726fbfac233a9308ab576c7f9051d7805e9f417:x-oauth-basic@github.com/loic294/react-apollo.git",
     "react-dom": "^16.5.1",
